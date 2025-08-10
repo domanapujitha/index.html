@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+  <meta charset="UTF-8">  
+  <title>Online Exam Portal</title>  
+  <style>  
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      text-align: center; /* Center all text/content */
+    }  
+    nav { 
+      background: #333; 
+      padding: 10px; 
+    }  
+    nav a { 
+      color: white; 
+      text-decoration: none; 
+      padding: 8px 15px; 
+      display: inline-block; 
+    }  
+    nav a:hover { 
+      background: #575757; 
+    }  
+    .section { 
+      display: none; 
+      padding: 20px; 
+    }  
+    .active { 
+      display: block; 
+    }  
+    button { 
+      padding: 8px 15px; 
+      margin-top: 10px; 
+    }  
+    ul, ol { 
+      display: inline-block; /* Keep lists centered */
+      text-align: left; /* Inside list text stays aligned left */
+    }
+    form {
+      display: inline-block; /* Keep quiz form centered */
+      text-align: left; 
+    }
+  </style>  
+</head>  
+<body>  
+<nav>  
+  <a href="#" onclick="showSection('home')">Home</a>  
+  <a href="#" onclick="showSection('register')">Register</a>  
+  <a href="#" onclick="showSection('login')">Login</a>  
+  <a href="#" onclick="showSection('test')">Test</a>  
+  <a href="#" onclick="showSection('result')">Results</a>  
+</nav>  
+<!-- Home Section -->  
+<div id="home" class="section active">  
+  <h1>Welcome to the Online Exam Portal</h1>  
+  <h3>ADITYA INSTITUTE OF TECHNOLOGY AND MANAGEMENT</h3>  
+  <br>  
+  <p>Welcome to the Department of Computer Science and Design. Explore our programs, faculty, and research initiatives.</p>  
+  <h2>Department of Vision &amp; Mission</h2>  
+  <h3>Our Vision</h3>  
+  <p>To lead in Data Science education and research, empowering students to innovate, solve problems, and make impactful decisions using data-driven technologies for the benefit of society.</p>  
+  <h3>Our Mission</h3>  
+  <ul>  
+      <li>Provide solid foundation in data science for innovative thinking and problem-solving.</li>  
+      <li>Incorporate data science techniques to enhance business processes and decision-making.</li>  
+      <li>Prepare students to manage large datasets, create effective data models, maintain data quality, gain insights, and visualize data effectively.</li>  
+  </ul>  
+  <p>Click Login to start your test.</p>  
+  <p>Welcome, <strong>register as a student</strong> or login (student/admin)</p>  
+  <h3> all the best </h3>
+</div>  
+
+<!-- Register Section -->  
+<div id="register" class="section">  
+  <h2>Register</h2>  
+  <label>Name: </label><input type="text"><br><br>  
+  <label>Email: </label><input type="email"><br><br>  
+  <label>Password: </label><input type="password"><br><br>  
+  <button onclick="showSection('login')">go to Login</button>  
+  <br><br>  
+  <ol> 
+      <li>Open the online examination registration page.</li> 
+      <li>Type your <b>full name</b> as it should appear on records.</li>
+      <li>Enter a valid <b>email address</b> for communication.</li> 
+      <li>Create a <b>password</b> for future logins.</li>  
+      <li>Click <b>go to the login</b> to create your account.</li>  
+      
+  </ol>  
+</div>  
+<!-- Login Section -->  
+<div id="login" class="section">  
+  <h2> student Login</h2>  
+  <label>Username: </label><input type="text"><br><br>  
+  <label>Password: </label><input type="password"><br><br>  
+  <button onclick="showSection('register')">Go to Register</button>  
+  <button onclick="showSection('test')">Start Test</button>  
+  <br><br>  
+  <h2> admin Login</h2>   
+  <label>Username: </label><input type="text"><br><br>  
+  <label>Password: </label><input type="password"><br><br>  
+  <button onclick="showSection('register')">Go to Register</button>  
+  <button onclick="showSection('test')">Start Test</button>  
+</div>  
+<!-- Test Section -->  
+<div id="test" class="section">  
+  <h2>Web Technology Test</h2>  
+  <form id="quizForm">  
+    <p>1. HTML stands for:   
+      <input type="radio" name="q1" value="a"> HyperText Markup Language  
+      <input type="radio" name="q1" value="b"> Home Tool Markup Language  
+    </p>  
+    <p>2. CSS is used for:  
+      <input type="radio" name="q2" value="a"> Styling web pages  
+      <input type="radio" name="q2" value="b"> Programming  
+    </p>  
+    <p>3. JavaScript is a ____ side scripting language:  
+      <input type="radio" name="q3" value="a"> Client  
+      <input type="radio" name="q3" value="b"> Server  
+    </p>  
+    <p>4. In HTML, the tag to create a hyperlink is:  
+      <input type="radio" name="q4" value="a"> &lt;a&gt;  
+      <input type="radio" name="q4" value="b"> &lt;link&gt;  
+    </p>  
+    <p>5. Latest version of HTML is:  
+      <input type="radio" name="q5" value="a"> HTML5  
+      <input type="radio" name="q5" value="b"> HTML4  
+    </p>  
+    <p>6. In CSS, the property to change text color is:  
+      <input type="radio" name="q6" value="a"> color  
+      <input type="radio" name="q6" value="b"> font-color  
+    </p>  
+    <p>7. In JavaScript, var, let, and ____ are used to declare variables:  
+      <input type="radio" name="q7" value="a"> const  
+      <input type="radio" name="q7" value="b"> static  
+    </p>  
+    <p>8. The HTML tag to display an image is:  
+      <input type="radio" name="q8" value="a"> &lt;img&gt;  
+      <input type="radio" name="q8" value="b"> &lt;image&gt;  
+    </p>  
+    <p>9. CSS stands for:  
+      <input type="radio" name="q9" value="a"> Cascading Style Sheets  
+      <input type="radio" name="q9" value="b"> Computer Style Sheets  
+    </p>  
+    <p>10. In HTML, the largest heading tag is:  
+      <input type="radio" name="q10" value="a"> &lt;h1&gt;  
+      <input type="radio" name="q10" value="b"> &lt;h6&gt;  
+    </p>  
+    <button type="button" onclick="checkAnswers()">Submit</button>  
+  </form>  
+</div>  
+
+<!-- Results Section -->  
+<div id="result" class="section">  
+    <h1>Web Technology Test </h1>  
+    <ol>  
+      <li>IT checked simple HTML, CSS, and basic website structure knowledge.</li>  
+      <li>The aim was to test my understanding of how web pages work.</li>  
+      <li>The result shows my basic skills in web development.</li>  
+    </ol>  
+  <h2>Your Result</h2>  
+  <p id="score"></p>  
+  <br>
+  <br>
+<h4>Thank you for participating in this online examination.</h4></div>
+<script>  
+function showSection(sectionId) {  
+  let sections = document.querySelectorAll('.section');  
+  sections.forEach(sec => sec.classList.remove('active'));  
+  document.getElementById(sectionId).classList.add('active');  
+}  
+function checkAnswers() {  
+  let correctAnswers = {  
+    q1: "a", q2: "a", q3: "a", q4: "a", q5: "a",  
+    q6: "a", q7: "a", q8: "a", q9: "a", q10: "a"  
+  };  
+  let score = 0;  
+  let form = document.forms["quizForm"];  
+  for (let q in correctAnswers) {  
+    if (form[q].value === correctAnswers[q]) score++;  
+  }  
+  document.getElementById('score').innerText = "You scored " + score + " out of 10.";  
+  showSection('result');  
+}  
+</script>  
+</body>  
+</html>
